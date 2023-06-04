@@ -195,8 +195,10 @@
 
       <section class="meals-diet">
         <div class="container">
-          <h2 class="subheading">Sample meals</h2>
-          <p class="secondary-head">Omnifood AI chooses from 5,000+ recipes</p>
+          <h2 class="subheading text-center">Meals</h2>
+          <p class="secondary-head text-center">
+            Omnifood AI chooses from 5,000+ recipes
+          </p>
           <div class="meal-diet-cards grid three-column">
             <div class="card card1">
               <img
@@ -204,20 +206,22 @@
                 src="img/meals/meal-1.jpg"
                 alt="food image"
               />
-              <p class="category">Vegetarian</p>
-              <p class="meal-name terheading">Japanese Gyozas</p>
+              <span class="category">Vegetarian</span>
+
               <div class="meal-features">
+                <p class="meal-name terheading mealth">Japanese Gyozas</p>
                 <ul class="meal-feature-list"></ul>
                 <li class="meal-item">
-                  <ion-icon name="flame-outline"></ion-icon> <span>650</span>
+                  <ion-icon class="icon" name="flame-outline"></ion-icon>
+                  <span><strong>650</strong> calories</span>
                 </li>
                 <li class="meal-item">
-                  <ion-icon name="restaurant-outline"></ion-icon>
-                  <span>74</span>
+                  <ion-icon class="icon" name="restaurant-outline"></ion-icon>
+                  <span>Nutriscore &reg; <strong>74</strong></span>
                 </li>
                 <li class="meal-item">
-                  <ion-icon name="star-outline"></ion-icon>
-                  <span>4.9(537)</span>
+                  <ion-icon class="icon" name="star-outline"></ion-icon>
+                  <span><strong>4.9</strong> rating (537)</span>
                 </li>
               </div>
             </div>
@@ -228,66 +232,113 @@
                 src="img/meals/meal-2.jpg"
                 alt="food image"
               />
-              <p class="category">Vegan and Paleo</p>
-              <p class="meal-name terheading">Avocado Salad</p>
+              <span class="category1">Vegan </span>
+              <span class="category catp">Paleo</span>
+
               <div class="meal-features">
+                <p class="meal-name terheading mealth">Avocado Salad</p>
                 <ul class="meal-feature-list"></ul>
                 <li class="meal-item">
-                  <ion-icon name="flame-outline"></ion-icon> <span>400</span>
+                  <ion-icon class="icon" name="flame-outline"></ion-icon>
+                  <span><strong>400</strong> calories</span>
                 </li>
                 <li class="meal-item">
-                  <ion-icon name="restaurant-outline"></ion-icon>
-                  <span>92</span>
+                  <ion-icon class="icon" name="restaurant-outline"></ion-icon>
+                  <span>Nutriscore &reg; <strong>92</strong></span>
                 </li>
                 <li class="meal-item">
-                  <ion-icon name="star-outline"></ion-icon>
-                  <span>4.8(441)</span>
+                  <ion-icon class="icon" name="star-outline"></ion-icon>
+                  <span><strong>4.8</strong> rating (441)</span>
                 </li>
               </div>
             </div>
 
             <div class="card card3">
-              <h2 class="meal-name">Omnifood works with any diet</h2>
-              <div class="meal-features">
-                <div class="meal-features1">
-                  <img src="" alt="" />
-                  <p>Vegetarian</p>
-                </div>
-                <div class="meal-features1">
-                  <img src="" alt="" />
-                  <p>Vegan</p>
-                </div>
-                <div class="meal-features1">
-                  <img src="" alt="" />
-                  <p>Pescatarian</p>
-                </div>
-                <div class="meal-features1">
-                  <img src="" alt="" />
-                  <p>Gluten-free</p>
-                </div>
-                <div class="meal-features1">
-                  <img src="" alt="" />
-                  <p>Lactose-free</p>
-                </div>
-                <div class="meal-features1">
-                  <img src="" alt="" />
-                  <p>Keto</p>
-                </div>
-                <div class="meal-features1">
-                  <img src="" alt="" />
-                  <p>Paleo</p>
-                </div>
-                <div class="meal-features1">
-                  <img src="" alt="" />
-                  <p>Low FODMAP</p>
-                </div>
-                <div class="meal-features1">
-                  <img src="" alt="" />
-                  <p>Kid-friendly</p>
-                </div>
+              <h3 class="meal-name1 terheading">Works with any diet</h3>
+              <div class="meal-features mflist">
+                <ul class="meal-list">
+                  <li class="meal-listitem">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="meal-list-icon"
+                      viewBox="0 0 512 512"
+                    >
+                      <path
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="32"
+                        d="M416 128L192 384l-96-96"
+                      />
+                    </svg>
+
+                    <span class="meal-list-text">Vegetarian</span>
+                  </li>
+                  <li class="meal-listitem">
+                    <ion-icon
+                      class="meal-list-icon"
+                      name="checkmark-outline"
+                    ></ion-icon>
+                    <span class="meal-list-text">Vegan</span>
+                  </li>
+                  <li class="meal-listitem">
+                    <ion-icon
+                      class="meal-list-icon"
+                      name="checkmark-outline"
+                    ></ion-icon>
+                    <span class="meal-list-text">Pescatarian</span>
+                  </li>
+                  <li class="meal-listitem">
+                    <ion-icon
+                      class="meal-list-icon"
+                      name="checkmark-outline"
+                    ></ion-icon>
+                    <span class="meal-list-text">Gluten-free</span>
+                  </li>
+                  <li class="meal-listitem">
+                    <ion-icon
+                      class="meal-list-icon"
+                      name="checkmark-outline"
+                    ></ion-icon>
+                    <span class="meal-list-text">Lactose-free</span>
+                  </li>
+                  <li class="meal-listitem">
+                    <ion-icon
+                      class="meal-list-icon"
+                      name="checkmark-outline"
+                    ></ion-icon>
+                    <span class="meal-list-text">Keto</span>
+                  </li>
+                  <li class="meal-listitem">
+                    <ion-icon
+                      class="meal-list-icon"
+                      name="checkmark-outline"
+                    ></ion-icon>
+                    <span class="meal-list-text">Paleo</span>
+                  </li>
+                  <li class="meal-listitem">
+                    <ion-icon
+                      class="meal-list-icon"
+                      name="checkmark-outline"
+                    ></ion-icon>
+                    <span class="meal-list-text">Low FODMAP</span>
+                  </li>
+                  <li class="meal-listitem">
+                    <ion-icon
+                      class="meal-list-icon"
+                      name="checkmark-outline"
+                    ></ion-icon>
+                    <span class="meal-list-text">Kid-friendly</span>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
+        </div>
+
+        <div class="container more-meals">
+          <a class="linkmeal" href="#">See all recipes &rarr;</a>
         </div>
       </section>
     </main>

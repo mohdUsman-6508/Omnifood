@@ -49,6 +49,9 @@ body {
 /* *************************
 general reusable css
 ****************************/
+strong {
+  font-family: 500;
+}
 .container {
   max-width: 130rem;
   padding: 3rem 9.6rem;
@@ -123,7 +126,7 @@ general reusable css
   font-weight: 600;
   line-height: 1.3;
   margin: 2rem 0 3rem 0;
-  color: #444;
+  color: #333;
 }
 
 .terheading {
@@ -133,6 +136,9 @@ general reusable css
   color: #333;
 }
 
+.text-center {
+  text-align: center;
+}
 /* ***************************** */
 /* navigation */
 
@@ -353,35 +359,135 @@ a {
 /* **************** */
 
 .mealimg {
-  width: 28rem;
-  height: 18rem;
+  display: block;
+  width: 100%;
+  /* width: 28rem;
+  height: 18rem; */
   border-top-right-radius: 0.8rem;
   border-top-left-radius: 0.8rem;
 }
 
 .meal-features {
-  padding: 1rem 1.2rem;
+  padding: 3.2rem 4rem 4rem 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.2rem;
 }
 .meal-item {
   list-style: none;
   font-size: 2.2rem;
   font-weight: 400;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
 }
 
 .meal-diet-cards {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  overflow: hidden;
+  border-radius: 1.2rem;
 }
 
 .category {
-  margin-top: 0.4rem;
+  display: inline-block;
+  padding: 0.6rem;
+  border-radius: 1.8rem;
+  margin-top: 0.9rem;
+  margin-left: 3.6rem;
   font-size: 1.6rem;
   font-weight: 400;
-  color: #555;
+  color: #444;
+  background-color: rgb(52, 234, 52);
+}
+.category1 {
+  display: inline-block;
+  padding: 0.6rem;
+  border-radius: 1.8rem;
+  margin-top: 0.9rem;
+  margin-left: 3.6rem;
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #444;
+  background-color: rgb(100, 221, 100);
+}
+.catp {
+  margin-left: 1.2rem;
+  background-color: rgb(182, 208, 18);
+}
+.meal-diet-cards {
+  margin-top: 7.2rem;
 }
 
 .card {
+  padding-top: 1.2rem;
+  width: 50rem;
+  border-radius: 1rem;
   margin-bottom: 4.2rem;
-  box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
+  transition: all 0.4s;
+}
+
+.card:hover {
+  transform: translateY(-1.2rem);
+  box-shadow: 0px 3.2rem 6.4rem rgba(0, 0, 0, 0.06);
+}
+.icon {
+  font-size: 2.2rem;
+  color: #cf711f;
+}
+.mealth {
+  margin-top: -1.6rem;
+  margin-bottom: -1.2rem;
+}
+
+.meal-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.meal-list-text {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #444;
+  letter-spacing: 0.75px;
+}
+.meal-listitem {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.meal-list-icon {
+  width: 2.4rem;
+  height: 2.4rem;
+  color: #e67e62;
+}
+.meal-name1 {
+  padding-left: 2rem;
+  color: #555;
+}
+.mflist {
+  margin-top: -1.4rem;
+}
+
+.more-meals {
+  margin-top: -4.8rem;
+  text-align: center;
+}
+.linkmeal:link,
+.linkmeal:visited {
+  display: inline-block;
+  padding-top: 2px;
+  font-size: 1.8rem;
+  color: #e67e62;
+  transition: all 0.3s;
+  border-bottom: 1px solid currentColor;
+  font-weight: 400;
+}
+.linkmeal:hover,
+.linkmeal:active {
+  color: #cf711f;
+  border-bottom: 1px solid transparent;
 }
