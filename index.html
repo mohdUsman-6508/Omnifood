@@ -1,32 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="html-class" lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Omnifood</title>
+    <meta
+      name="description"
+      content="The smart 365-days-per-year food subscription that will make you eat healthy again. Tailored to your personal tastes and nutritional needs. We have delivered 250,000+ meals last year!"
+    />
+    <link rel="icon" href="img/optimizedImage/favicon.png" />
+    <link
+      rel="apple-touch-icon"
+      href="img/optimizedImage/apple-touch-icon.png"
+    />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <title>Omnifood &dash; Never cook again!</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
-
+    <link rel="stylesheet" href="css/grid.css" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <header class="header">
+      <!-- ///nav-open -->
       <img class="logo" src="img/omnifood-logo.png" alt="omnifood-logo" />
+
       <nav class="main-nav">
         <ul class="navlist">
-          <li class="navitem"><a href="#" class="navitem-a">Home</a></li>
-          <li class="navitem"><a href="#" class="navitem-a">About</a></li>
-          <li class="navitem"><a href="#" class="navitem-a">Contact</a></li>
           <li class="navitem">
-            <a href="#" class="navitem-a ctc">Meals</a>
+            <a href="#howscroll" class="navitem-a">How it works</a>
+          </li>
+          <li class="navitem">
+            <a href="#mealscroll" class="navitem-a">Meals</a>
+          </li>
+          <li class="navitem">
+            <a href="#testscroll" class="navitem-a"> Testimonials </a>
+          </li>
+          <li class="navitem">
+            <a href="#pricescroll" class="navitem-a">Pricing</a>
+          </li>
+          <li class="navitem">
+            <a href="#ctaform" class="navitem-a ctc">Try for free</a>
           </li>
         </ul>
       </nav>
+      <button class="menu-btn">
+        <ion-icon class="menu-icon" name="menu-outline"></ion-icon>
+        <ion-icon class="menu-icon" name="close-outline"></ion-icon>
+      </button>
     </header>
 
     <main>
@@ -42,10 +67,15 @@
               nutritional needs.
             </p>
 
-            <a href="#" class="btn btn-main margin-right">Start eating well</a>
-            <a href="#" class="btn btn-secondary">Learn more &darr;</a>
-
-            <div class="meal-del">
+            <div class="btncontain">
+              <a href="#ctaform" class="btn btn-main margin-right"
+                >Start eating well</a
+              >
+              <a href="#featuredinscroll" class="btn btn-secondary"
+                >Learn more &darr;</a
+              >
+            </div>
+            <div class="grid two-column">
               <div class="meal-img">
                 <img
                   class="meal-imgs"
@@ -88,16 +118,20 @@
           </div>
 
           <div class="hero-image-box">
-            <img
-              src="img/hero.png"
-              alt="three food images"
-              class="hero-image"
-            />
+            <picture>
+              <source srcset="img/optimizedImage/hero.webp" />
+              <source srcset="img/optimizedImage/hero-min.png" />
+              <img
+                src="img/optimizedImage/hero-min.png"
+                alt="three food images"
+                class="hero-image"
+              />
+            </picture>
           </div>
         </div>
       </section>
 
-      <section class="featured-in">
+      <section class="featured-in" id="featuredinscroll">
         <p class="featured-text">As featured in</p>
         <div class="featured-box">
           <div class="featured-logo">
@@ -127,10 +161,10 @@
         </div>
       </section>
 
-      <section class="section-how">
-        <div class="container">
-          <span class="subheading">How it works</span>
-          <h2 class="secondary-head">
+      <section class="section-how" id="howscroll">
+        <div class="container con">
+          <span class="subheading sub">How it works</span>
+          <h2 class="secondary-head sh">
             Your daily dose of health in 3 simple steps &rarr;
           </h2>
         </div>
@@ -147,7 +181,7 @@
             </p>
           </div>
 
-          <div class="step-img-box">
+          <div class="simg1 step-img-box">
             <img
               src="img/app/app-screen-1.png"
               alt="direction of what to eat or not"
@@ -156,7 +190,7 @@
         </div>
 
         <div class="container grid two-column">
-          <div class="step-img-box">
+          <div class="simg2 step-img-box">
             <img
               src="img/app/app-screen-2.png"
               alt="direction of what to eat or not"
@@ -174,9 +208,9 @@
         </div>
 
         <div class="container grid two-column">
-          <div class="step-text-box">
+          <div class="simg3 step-text-box">
             <p class="step">03</p>
-            <h3 class="terheading">Receive meals at convenient time:</h3>
+            <h3 class="terheading ter">Receive meals at convenient time:</h3>
             <p class="step-des">
               Best chefs in town will cook your selected meal every day, and we
               will deliver it to your door whenever works best for you. You can
@@ -193,7 +227,7 @@
         </div>
       </section>
 
-      <section class="meals-diet">
+      <section class="meals-diet" id="mealscroll">
         <div class="container">
           <h2 class="subheading text-center">Meals</h2>
           <p class="secondary-head text-center">
@@ -254,8 +288,8 @@
             </div>
 
             <div class="card card3">
-              <h3 class="meal-name1 terheading">Works with any diet</h3>
               <div class="meal-features mflist">
+                <h3 class="meal-name1 terheading">Works with any diet</h3>
                 <ul class="meal-list">
                   <li class="meal-listitem">
                     <svg
@@ -341,7 +375,7 @@
           <a class="linkmeal" href="#">See all recipes &rarr;</a>
         </div>
       </section>
-      <section class="testimonial-gallery">
+      <section class="testimonial-gallery" id="testscroll">
         <div class="test grid two-column">
           <div class="testimonials">
             <p class="testimonial-heading secondary-head">Testimonials</p>
@@ -490,7 +524,7 @@
         </div>
       </section>
 
-      <section class="container pricing-feature">
+      <section class="container pricing-feature" id="pricescroll">
         <p class="testimonial-heading priceh">PRICING</p>
         <p class="line-1 secondary-head">
           Eat healthy without breaking your bank
@@ -615,7 +649,7 @@
         </div>
       </section>
 
-      <section class="cta-section">
+      <section class="cta-section" id="ctaform">
         <div class="container">
           <div class="cta">
             <div class="cta-text">
@@ -625,29 +659,32 @@
                 eating well today. You can cancel or pause anytime. And the
                 first meal is on us!
               </p>
-              <form action="#" class="cta-form">
+              <form class="cta-form" name="sign-up" netlify>
                 <div class="cta-input">
                   <label for="fullname">Full Name</label>
                   <input
                     type="text"
                     id="fullname"
-                    placeholder="usamn gani"
+                    placeholder="usman gani"
                     required
+                    name="fullname"
                   />
                 </div>
 
                 <div class="cta-input">
-                  <label for="email">E-mail address</address></label>
+                  <label for="email">E-mail address</label>
                   <input
                     type="email"
-                    name=""
                     id="email"
                     placeholder="abc@gmail.com"
                     required
+                    name="email"
                   />
                 </div>
                 <div class="cta-input">
-                  <label for="forus">How do you know about us ?</label>
+                  <label for="forus" name="forus"
+                    >How do you know about us ?</label
+                  >
                   <select name="where" id="forus">
                     <option value="">Select an option</option>
                     <option value="youtube">youtube</option>
@@ -668,6 +705,93 @@
         </div>
       </section>
     </main>
+
+    <footer class="footer">
+      <div class="ftr container grid five-columns">
+        <div class="Copyright">
+          <a href="#">
+            <img
+              class="logo footer-logo"
+              src="img/omnifood-logo.png"
+              alt="omnifood-logo"
+          /></a>
+
+          <div class="social-media">
+            <ul>
+              <li>
+                <a class="footer-link" href="#">
+                  <ion-icon
+                    class="footer-icon"
+                    name="logo-instagram"
+                  ></ion-icon>
+                </a>
+              </li>
+              <li>
+                <a class="footer-link" href="#">
+                  <ion-icon class="footer-icon" name="logo-facebook"></ion-icon>
+                </a>
+              </li>
+              <li>
+                <a class="footer-link" href="#">
+                  <ion-icon class="footer-icon" name="logo-twitter"></ion-icon>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <p class="Copy">Copyright &copy; 2024. All right reserved.</p>
+        </div>
+
+        <div class="contact-us">
+          <p class="contactusp">Contact us</p>
+          <address>
+            <p class="addressp">
+              623 Harrison St., 2nd Floor, San Francisco, CA 94107
+            </p>
+            <p>
+              <a class="footer-link" href="tel:415-201-6370">415-201-6370</a>
+            </p>
+            <p>
+              <a class="footer-link" href="mail to:hello@omnifood.com"
+                >hello@omnifood.com</a
+              >
+            </p>
+          </address>
+        </div>
+        <div class="account">
+          <nav class="navigation">
+            <p>Account</p>
+            <ul>
+              <li><a class="footer-link" href="#">Create account</a></li>
+              <li><a class="footer-link" href="#">Sign in</a></li>
+              <li><a class="footer-link" href="#">ios app</a></li>
+              <li><a class="footer-link" href="#">Android app</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="company">
+          <nav class="navigation">
+            <p>Company</p>
+            <ul>
+              <li><a class="footer-link" href="#">About Omnifood </a></li>
+              <li><a class="footer-link" href="#">For Business </a></li>
+              <li><a class="footer-link" href="#"> Cooking partners</a></li>
+              <li><a class="footer-link" href="#">Careers</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="resources">
+          <nav class="navigation">
+            <p>Resources</p>
+            <ul>
+              <li><a class="footer-link" href="#">Recipe directory </a></li>
+              <li><a class="footer-link" href="#"> Help center</a></li>
+              <li><a class="footer-link" href="#"> Privacy & terms</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </footer>
+
     <script
       type="module"
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
@@ -676,5 +800,8 @@
       nomodule
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
     ></script>
+
+    <script src="javascript/script.js"></script>
+    <script src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"></script>
   </body>
 </html>

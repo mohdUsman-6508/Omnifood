@@ -38,12 +38,16 @@ Default: 1
 
 html {
   font-size: 62.5%;
+  overflow-x: hidden;
+  /* does not work on safari */
+  /* scroll-behavior: smooth; */
 }
 body {
   font-weight: 400;
   font-family: "Rubik", sans-serif;
   line-height: 1;
   color: #555;
+  overflow-x: hidden;
 }
 
 /* *************************
@@ -71,6 +75,9 @@ strong {
 }
 .four-column {
   grid-template-columns: repeat(4, 1fr);
+}
+.five-column {
+  grid-template-columns: repeat(5, 1fr);
 }
 
 .btn:link,
@@ -142,13 +149,56 @@ strong {
 /* ***************************** */
 /* navigation */
 
+/* mobile navigation */
+.menu-btn {
+  border: none;
+  background: none;
+  display: none;
+}
+
+.menu-icon {
+  height: 4.2rem;
+  width: 4.2rem;
+  color: #666;
+  font-weight: 700;
+  /* display: none; */
+}
+
+.menu-icon[name="menu-outline"] {
+  /* display: none; */
+}
+
+.menu-icon[name="close-outline"] {
+  display: none;
+}
+
+/* //////////////////////// */
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #fdf2e9;
-  padding: 3.2rem;
+  padding: 4.2rem;
+  position: relative;
 }
+
+.sticky .header {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  height: 8rem;
+  width: 100%;
+  background-color: #fff;
+  padding-top: 0;
+  padding-bottom: 0;
+  box-shadow: 0 1.2rem 3.2rem rgb(0, 0, 0, 0.03);
+  z-index: 999;
+}
+
+.sticky .hero-section {
+  margin-top: 9.6rem;
+}
+
 .logo {
   height: 2.2rem;
 }
@@ -158,7 +208,8 @@ strong {
   list-style: none;
   justify-content: space-evenly;
   align-items: center;
-  gap: 3.2rem;
+  gap: 4.8rem;
+  font-weight: 700;
 }
 a {
   text-decoration: none;
@@ -167,9 +218,9 @@ a {
 .navitem-a:link,
 .navitem-a:visited {
   color: #333;
-  font-size: 1.6rem;
+  font-size: 2rem;
   transition: all 0.2s;
-  font-weight: 500;
+  font-weight: 700;
 }
 .navitem-a:hover,
 .navitem-a:active {
@@ -180,7 +231,7 @@ a {
 .ctc:visited {
   color: #fff;
   padding: 0.7rem 1.4rem;
-  font-weight: 500;
+  font-weight: 600;
   display: inline-block;
   background-color: #e67e62;
   border-radius: 9px;
@@ -230,12 +281,18 @@ a {
   color: #333;
 }
 
-.meal-del {
-  display: grid;
-  grid-template-columns: 0.9fr 1.2fr;
-  gap: 2.5rem;
+.hero-image-box {
+  display: flex;
+}
+
+.btncontain {
+  display: flex;
+}
+
+.hero-text-box .grid {
   align-items: center;
   margin-top: 12rem;
+  /* margin-left: 9rem; */
 }
 
 .meal-imgs {
@@ -338,6 +395,7 @@ a {
   padding: 4.2rem 1.2rem;
   margin: 0 auto;
   max-width: 110rem;
+  margin-top: 4rem;
 }
 .featured-box {
   margin-bottom: -2.8rem;
@@ -358,6 +416,9 @@ a {
 /* meals+diets */
 /* **************** */
 
+.meal-diet {
+  max-width: 160rem;
+}
 .mealimg {
   display: block;
   width: 100%;
@@ -383,7 +444,7 @@ a {
 }
 
 .meal-diet-cards {
-  display: flex;
+  display: grid;
   justify-content: space-between;
   align-items: center;
   overflow: hidden;
@@ -422,11 +483,11 @@ a {
 
 .card {
   padding-top: 1.2rem;
-  width: 50rem;
+  max-width: 50rem;
   border-radius: 1rem;
   margin-bottom: 4.2rem;
   box-shadow: 0px 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
-  transition: all 0.4s;
+  transition: all 0.3s;
 }
 
 .card:hover {
@@ -471,7 +532,9 @@ a {
 .mflist {
   margin-top: -1.4rem;
 }
-
+.card3 {
+  box-shadow: none;
+}
 .more-meals {
   margin-top: -4.8rem;
   text-align: center;
@@ -503,11 +566,15 @@ a {
 .testimonial-gallery {
   margin-top: 9.6rem;
   background-color: #fdf2e9;
+  max-width: 160rem;
+  margin: 0 auto;
 }
 .gallery {
   row-gap: 1.2rem;
   column-gap: 1.2rem;
   padding: 1.8rem;
+  max-width: 130rem;
+  overflow: hidden;
 }
 .figimg {
   overflow: hidden;
@@ -561,6 +628,7 @@ a {
 
 .test {
   grid-template-columns: 55fr 45fr;
+  overflow: hidden;
 }
 
 /* **************** */
@@ -590,7 +658,7 @@ a {
   border-radius: 0;
   border-top-left-radius: 1.2rem;
   border-bottom-right-radius: 1.2rem;
-  width: 70%;
+  width: 80%;
 
   /* z-index: ; */
 }
@@ -692,7 +760,7 @@ a {
   content: "best value";
   text-transform: uppercase;
   background-color: #ffd43b;
-  padding: 1.8rem 7rem;
+  padding: 1.6rem 6rem;
   font-size: 1.2rem;
   font-weight: 700;
   position: absolute;
@@ -750,12 +818,13 @@ a {
 .container {
 }
 .cta {
+  max-width: 160rem;
   display: grid;
   grid-template-columns: 2fr 1fr;
-
   background-image: linear-gradient(to right bottom, #eb984e, #e67e22);
   overflow: hidden;
   border-radius: 1.2rem;
+  box-shadow: 0 0 5rem rgb(0, 0, 0, 0.3);
 }
 
 .cta-img {
@@ -801,6 +870,7 @@ a {
 .cta-form label,
 select,
 option {
+  font-family: inherit;
   display: block;
   font-size: 1.6rem;
   font-weight: 600;
@@ -808,6 +878,7 @@ option {
 }
 .cta-form input,
 select {
+  font-family: inherit;
   width: 100%;
   padding: 1.8rem 1.6rem;
   font-size: 1.8rem;
@@ -832,6 +903,7 @@ select {
 
 .cta-form::placeholder {
   color: #aaa;
+  font: inherit;
 }
 *:focus {
   outline: none;
@@ -841,4 +913,93 @@ select {
 .cta-form *:focus {
   outline: none;
   box-shadow: 0 0 0 3px rgba(14, 9, 1, 0.481);
+}
+
+/* ##################### */
+/* footer */
+/* ##################### */
+
+.footer {
+  margin-top: 12.8rem;
+  margin-bottom: 5rem;
+  border-top: 1px solid #e4d4d4;
+  padding: 4rem;
+  padding-top: 12rem;
+}
+.five-columns {
+  grid-template-columns: 1.5fr 1.5fr 1fr 1fr 1fr;
+}
+.footer ul {
+  list-style: none;
+}
+
+.navigation ul {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.navigation p {
+  color: #555;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 4.2rem;
+}
+.footer-link:visited,
+.footer-link:link {
+  color: #888;
+  font-size: 1.6rem;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+.footer-link:hover,
+.footer-link:active {
+  color: #444;
+  cursor: pointer;
+}
+
+.social-media ul {
+  display: flex;
+  gap: 3rem;
+}
+.footer-icon {
+  height: 2.6rem;
+  width: 2.6rem;
+  margin-top: 3rem;
+}
+.Copyright {
+  display: flex;
+  flex-direction: column;
+}
+.Copy {
+  margin-top: auto;
+  /* mast trick hai */
+  font-size: 1.6rem;
+  color: #888;
+  line-height: 1.6;
+  font-weight: 500;
+}
+.addressp {
+  font-size: 1.6rem;
+  color: #666;
+  line-height: 1.6;
+  font-weight: 400;
+  font-style: normal;
+  margin-bottom: 2rem;
+}
+.contactusp {
+  color: #555;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 3.4rem;
+}
+
+address {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+address a {
+  font-style: normal;
 }
